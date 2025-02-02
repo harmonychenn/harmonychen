@@ -55,5 +55,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.6 }); 
 
+    //type effect
+document.addEventListener("DOMContentLoaded", function() {
+    const text = "Hi, I'm Harmony.";
+    const typingElement = document.getElementById("typing-text");
+    let index = 0;
+  
+    function typeEffect() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 150); 
+      } else {
+        typingElement.style.borderRight = "none"; 
+      }
+    }
+  
+    typeEffect();
+  });
+
     sections.forEach(section => observer.observe(section));
 });
