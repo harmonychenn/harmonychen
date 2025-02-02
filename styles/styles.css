@@ -1,0 +1,406 @@
+
+  
+  /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  .container, .about, .arts, .experience, .education, .contact {
+    padding: 100px;
+    text-align: justify;
+  }
+  
+
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 75px;
+    line-height: 25px;
+    padding-left: 10%;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 1000;
+  }
+  nav a {
+    text-decoration: none;
+    justify-content: center;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background-color: #76a99b;
+    color: white;
+  }
+  
+  /* Home Section */
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 200px;
+  }
+  .intro {
+    padding-top: 80px;
+
+  }
+
+  .intro h1 {
+    font-size: 80px;
+    text-align: left;
+    width: 100%;
+    padding-top: 50px;
+  }
+  
+  .intro h3 {
+    font-size: 30px;
+    text-align: left;
+    width: 75%;
+    color:#3f5749;
+  }
+
+
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    outline: 2px solid #333;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #5c8a7c;
+    outline-color: white;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-image {
+    justify-content: right;
+    padding-top: 170px;
+    margin-right: 10%;
+  }
+  
+  .about-image img {
+    margin-left: 20px; /* Adds some space between text and image */
+    max-width: 300px; /* Limit the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.2s;
+    box-shadow: 14px 14px 0px #41564A, -14px -14px #618B72;
+  }
+
+  .about-image img:hover {
+    box-shadow: 14px 14px 0px #aabeb3, -14px -14px #90c0a3;
+}
+
+  
+  /* About Section */
+  .about-content {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+   
+  }
+
+  .about-content img {
+    margin-right: 30px;
+    margin-left: 10%;
+    margin-top: 50px;
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+   
+    border-radius: 50%;
+  }
+
+  .about-content p {
+    max-width: 750px;
+    min-width: 250px;
+    margin-top: 50px;
+    font-size: 20px;
+    padding-bottom: 10%;
+  }
+  
+  /* Arts Section */
+  .arts {
+    margin-bottom: 1%;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-items: left;
+    justify-content: left;
+    row-gap: 20px;
+}
+
+.gallery img {
+    justify-content: left;
+    margin: 20px;
+}
+.art-box {
+    justify-content: left;
+    position: relative;
+    left: -200px;
+    margin-left: 20px;
+    padding: 10px;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.art-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: -14px 14px 0px #41564A;
+    transition: transform 0.3 ease;
+    
+
+}
+
+.art-box:hover {
+    transform: scale(1.05);
+
+}
+.more-link {
+    display: block;
+    margin: 5px 0;
+    margin-left: 7.5%;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 10%;
+    color: #3b5547;
+    text-align: right;
+    margin-right: 10%;
+}
+
+.more-link:hover {
+    color: #90c0a3;
+}
+
+.experience {
+    margin-bottom: -100px;
+}
+
+.experience h4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    margin-left: 7.5%;
+    font-size: 26px;
+}
+
+.experience p, .education p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    margin-left: 7.5%;
+    font-size: 20px;
+    max-width: 1000px;
+}
+
+.experience p span:first-child,
+.education p span:first-child {
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+  /*Contact*/
+  .contact {
+    display: block;
+  }
+  .contact p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    margin-left: 10%;
+    font-size: 26px;
+  }
+
+
+
+.contact p {
+    font-size: 20px;
+    color: #4a5a4a;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.icons {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    margin-left: 10%;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #618B72;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 28px;
+    height: 28px;
+}
+  /* Footer */
+  footer {
+    background-color: #618B72;
+    color: white;
+    padding: 5%;
+    text-align: center;
+  }
+
+  footer a:hover {
+    color: rgb(34, 68, 34);
+  }
+
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: thin;
+    font-size: 20px;
+  }
+  
+  .arrow {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .arrow img {
+    width: 40px;
+    height: 40px;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+    .gallery img {
+      min-width: none;
+      margin-right: 20px;
+    }
+    nav {
+      gap: 5px;
+      padding: 8px;
+    }
+  
+    nav a {
+      padding: 6px 12px;
+    }
+  .container {
+      padding: 50px 5%;
+  }
+  h1 {
+      font-size: 50px;
+  }
+  h2 {
+      font-size: 40px;
+  }
+  
+  .intro h1 .intro h2 {
+    font-size: smaller;
+  }
+  }
+  
+  /* Bg colours */
+  
+  .about, .education {
+  background-color: #d5d8da;
+}
+    .about, .experience, .education {
+  background-color: #618B72;
+  color: #d5d8da;
+}
+  
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*art portfolio*/
+.construction h1 {
+  font-family: 'Inter', sans-serif;
+  padding-left: 5%;
+  font-size: 25x;
+  color:#3b5547
+}
+
+.construction a{
+  font-family: 'Inter', sans-serif;
+  padding-left: 5%;
+  font-size: 17px;
+  color:#3f5749;
+  text-decoration: none;
+}
+
+.construction a:hover {
+  color: #76a99b;
+  box-shadow: inset;
+  text-decoration: none;
+
+}
+
+.back a {
+  font-family: 'Inter', sans-serif;
+  padding-left: 5%;
+  margin-top: 20px;
+  font-size: 21px;
+  color:#3f5749;
+  text-decoration: none;
+}
+.back a:hover {
+  color: #90c9ba;
+  box-shadow: inset;
+  text-decoration: none;
+
+}
