@@ -55,7 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.6 }); 
 
-    //type effect
+    sections.forEach(section => observer.observe(section));
+});
+
+//type effect
 document.addEventListener("DOMContentLoaded", function() {
     const text = "Hi, I'm Harmony.";
     const typingElement = document.getElementById("typing-text");
@@ -65,14 +68,11 @@ document.addEventListener("DOMContentLoaded", function() {
       if (index < text.length) {
         typingElement.textContent += text.charAt(index);
         index++;
-        setTimeout(typeEffect, 150); 
+        setTimeout(typeEffect, 150); // Adjust typing speed (in milliseconds)
       } else {
-        typingElement.style.borderRight = "none"; 
+        typingElement.style.borderRight = "none"; // Remove cursor after typing is complete
       }
     }
   
     typeEffect();
   });
-
-    sections.forEach(section => observer.observe(section));
-});
