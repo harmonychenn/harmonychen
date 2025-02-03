@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
       if (index < text.length) {
         typingElement.textContent += text.charAt(index);
         index++;
-        setTimeout(typeEffect, 120); 
+        setTimeout(typeEffect, 150); // Adjust typing speed (in milliseconds)
       } else {
-        typingElement.style.borderRight = "none"; 
+        typingElement.style.borderRight = "none"; // Remove cursor after typing is complete
       }
     }
   
